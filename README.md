@@ -25,3 +25,30 @@ Como o projeto é modular, é necessário vincular os arquivos objeto correspond
 ### 1. Compilar o Gerador
 ```bash
 gcc gerador.c ean8_geracao.c ean8_core.c -o gerador
+```
+
+### Sintaxe para execução:
+
+```bash
+./gerador <identificador> [espacamento] [pixels_por_area] [altura] [nome_arquivo]
+```
+
+### Exemplo simples:
+```bash
+./gerador 40170725
+```
+
+### Exemplo personalizado:
+```bash
+./gerador 40170725 10 5 100 meu_codigo.pbm
+```
+
+### 2. Compilar o Extrator
+```bash
+gcc extrator.c ean8_extracao.c ean8_core.c -o extrator
+```
+
+### Exemplo
+```bash
+./extrator meu_codigo.pbm
+```
